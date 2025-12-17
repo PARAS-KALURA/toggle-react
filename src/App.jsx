@@ -9,10 +9,10 @@ const App = () => {
           <div>
             <h2 className="text-3xl font-bold text-center ">Multi Toggle App</h2>
             <div className='mt-4  flex justify-center gap-3 '  >
-              <button className='cursor-pointer px-3 border border-gray-300 rounded-sm '   ><span>Red</span></button>
-              <button className='cursor-pointer px-3 border border-gray-300 rounded-sm '   ><span>Green</span></button>
-              <button className='cursor-pointer px-3 border border-gray-300 rounded-sm  ' ><span>Black</span></button>
-              <button className='cursor-pointer  px-3 border border-gray-300 rounded-sm '  ><span>Orange</span></button>
+              <button className='cursor-pointer px-3 border border-gray-300 rounded-sm transition-transform duration-100 hover:scale-110'><span>Red</span></button>
+              <button className='cursor-pointer px-3 border border-gray-300 rounded-sm transition-transform duration-100 hover:scale-110'   ><span>Green</span></button>
+              <button className='cursor-pointer px-3 border border-gray-300 rounded-sm  transition-transform duration-100 hover:scale-110 ' ><span>Black</span></button>
+              <button className='cursor-pointer  px-3 border border-gray-300 rounded-sm transition-transform duration-100 hover:scale-110 '  ><span>Orange</span></button>
             </div>
           </div>
 
