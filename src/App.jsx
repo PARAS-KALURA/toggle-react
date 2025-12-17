@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {  useEffect, useState } from "react";
 
 const App = () => {
   // Step 1: state
@@ -13,12 +13,12 @@ const App = () => {
     },
     red: {
       label: "Red",
-      bg: "bg-red-500",
+      bg: "bg-red-900",
       text: "text-black",
     },
     orange: {
       label: "Orange",
-      bg: "bg-orange-500",
+      bg: "bg-orange-600",
       text: "text-black",
     },
     black: {
@@ -28,10 +28,29 @@ const App = () => {
     },
     green: {
       label: "Green",
-      bg: "bg-green-800",
+      bg: "bg-green-950",
       text: "text-black",
     },
   };
+
+// load item
+
+useEffect(() => {
+  const savedTheme = localStorage.getItem("theme");
+  
+  if(savedTheme) {
+    setTheme(savedTheme);
+  }
+
+},[])
+
+  // save
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  },[theme]);
+
+
 
   return (
     <div
@@ -44,7 +63,7 @@ const App = () => {
           Multi Toggle App
         </h2>
 
-        <div className="mt-4 flex justify-center gap-3">
+        <div className="mt-4 flex justify-center gap-3 ">
           {Object.keys(themes).map((key) => {
             const isActive = theme === key;
 
@@ -53,7 +72,7 @@ const App = () => {
                 key={key}
                 onClick={() => setTheme(key)}
                 className={`px-3 py-1 rounded-sm border
-                  transition-all duration-150
+                  transition-all duration-150 cursor-pointer
                   hover:scale-110
                   ${
                     isActive
