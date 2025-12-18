@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 
 const App = () => {
   // Step 1: state
@@ -60,7 +60,7 @@ useEffect(() => {
     >
       <div className="w-full max-w-xl min-h-[80px] p-4 border border-gray-300 rounded-lg shadow-sm bg-white/80">
         <h2 className="text-3xl font-bold text-center">
-          Multi Toggle App
+          Multi Togglle App
         </h2>
 
         <div className="mt-4 flex justify-center gap-3 ">
